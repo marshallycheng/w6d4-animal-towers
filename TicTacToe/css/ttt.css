@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 30px;
+  align-self: center;
+}
+
+.board {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-wrap: wrap;
+  background: green;
+  padding: 0;
+  border: 5px solid black;
+  margin: 0 auto;
+}
+
+.board .empty_box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  background: grey;
+  border: 5px solid black;
+  font-size: 60px;
+
+}
+
+.empty_box:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.X, .O {
+  background: white;
+  cursor: default;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 5px solid black;
+  font-size: 60px;
+  text-align: center;
+  line-height: 88px;
+}
+
+figcaption {
+  margin: 20px auto;
+  width: 300px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.X:after {
+  content: "X";
+}
+
+.O:after {
+  content: "O";
+}
+
+.gameover .empty_box {
+  background: white;
+}
+
+.gameover .empty_box:hover {
+  cursor: default;
+}
+
+.winner-x .X, .winner-o .O {
+  background: green;
+  color: white;
+}
+
+.winner-x .O, .winner-o .X {
+  background: white;
+  color: red;
+}
