@@ -34,7 +34,7 @@ class View {
       } else {
         this.el.addClass('winner-o');
       }
-      this.el.off('click','li')
+      this.el.off('click','li');
     }
   }
 
